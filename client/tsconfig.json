@@ -1,0 +1,36 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "embedded_plugins/**/*.ts",
+    "embedded_plugins/**/*.tsx",
+    "plugins/**/*.ts",
+    "plugins/**/*.tsx"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2020",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react", // use typescript to transpile jsx to js
+    "allowJs": true, // allow a partial TypeScript and JavaScript codebase
+    "moduleResolution": "Node",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "typedocOptions": {
+    "entryPointStrategy": "expand",
+    "entryPoints": ["src"],
+    "out": "docs",
+    "hideBreadcrumbs": true,
+    "readme": "none",
+    "disableSources": true,
+    "cleanOutputDir": false,
+    "githubPages": false,
+    "excludeExternals": true,
+    "listInvalidSymbolLinks": true
+  }
+}

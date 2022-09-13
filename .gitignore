@@ -1,0 +1,27 @@
+node_modules/*
+build/*
+.idea/*
+
+# built files
+native-mimc/mimc_function
+native-mimc/mimc_function.wasm
+native-mimc/mimc_function.js
+native-mimc/mimc_gmp
+
+.DS_Store
+
+node_modules
+*.env
+
+.vscode/slither-results.json
+
+# Yarn stuff
+/.yarn/*
+!/.yarn/releases
+!/.yarn/plugins
+!/.yarn/sdks
+!/.yarn/versions
+/.pnp.*
+
+# Local Netlify folder
+.netlify

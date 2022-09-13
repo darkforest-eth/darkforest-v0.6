@@ -1,0 +1,38 @@
+{
+  // Always format on save
+  "editor.formatOnSave": true,
+  // Enables prettier as the default formatter throughout the workspace
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Always insert a newline at the end of the file when you save a file, good for git diffs
+  "files.insertFinalNewline": true,
+  // Always trim trailing whitespace
+  "files.trimTrailingWhitespace": true,
+  // The .eslintrc.json for the monorepo exists at the root of the project
+  "eslint.workingDirectories": ["./"],
+  // Always require the prettier config so it doesn't use the built-in config
+  "prettier.requireConfig": true,
+  // This should match the solidity version we specify in hardhat.config.ts
+  // It can be set with the `Solidity: Change Workspace Compiler Version (Remote)` command
+  "solidity.compileUsingRemoteVersion": "v0.8.10+commit.fc410830",
+  // Don't allow the solidity plugin to format because we already use prettier
+  "solidity.formatter": "none",
+  // Globs to indicate which tests to show in the mocha explorer
+  "mochaExplorer.files": ["eth/test/**/*.{j,t}s", "webserver/test/**/*.{j,t}s"],
+  // Most mocha tests need to run inside the eth directory to have access to hardhat runtime env
+  "mochaExplorer.cwd": "eth",
+  // Rewrap code comments and things automatically
+  "rewrap.autoWrap.enabled": true,
+  // The tagged template literals that trigger HTML support in the lit plugin
+  "lit-plugin.htmlTemplateTags": ["html", "raw"],
+  // Disable the "no-invalid-css" rule because styled-components use css tagged template literal
+  // and we don't want to see errors on them
+  "lit-plugin.rules.no-invalid-css": "off",
+  // Apply the github workflow schema to any .yml files in the `.github` directory
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": [".github/**/*.yml"]
+  },
+  // Screw redhat and their telemetry
+  "redhat.telemetry.enabled": false,
+  // Always use single quotes in yml files
+  "yaml.format.singleQuote": true
+}

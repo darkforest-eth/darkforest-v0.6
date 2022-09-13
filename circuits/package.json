@@ -1,0 +1,18 @@
+{
+  "name": "circuits",
+  "version": "6.7.0-dev.0",
+  "private": true,
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "circomlib": "^2.0.3",
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.0"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "lint": "exit 0",
+    "format": "prettier --write .",
+    "clean": "exit 0"
+  }
+}

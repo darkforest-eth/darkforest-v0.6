@@ -1,0 +1,44 @@
+{
+  "name": "@darkforest_eth/snarks",
+  "version": "6.7.0-dev.0",
+  "license": "MIT",
+  "author": "0xPARC <ivan@0xPARC.org>",
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.d.ts",
+    "index.ts",
+    "*.wasm",
+    "*.zkey",
+    "*.r1cs",
+    "interfaces/"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run docs",
+    "build": "tsc -p .",
+    "test": "exit 0",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "docs": "typedoc && npm run format",
+    "clean": "del-cli node_modules index.js index.js.map index.d.ts index.d.ts.map tsconfig.ref.tsbuildinfo"
+  },
+  "peerDependencies": {
+    "snarkjs": "^0.4.16"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.1",
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.0",
+    "typedoc": "^0.22.8",
+    "typedoc-plugin-markdown": "3.11.x",
+    "typescript": "4.5.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

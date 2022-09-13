@@ -1,0 +1,27 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    // Create .js.map files for each generated JS file
+    "sourceMap": true,
+    // Embed the original source into the sourceMap instead of pointing to source files
+    "inlineSources": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": ".",
+    "hideBreadcrumbs": true,
+    "readme": "none",
+    "disableSources": true,
+    "cleanOutputDir": false,
+    "githubPages": false
+  }
+}

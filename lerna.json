@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/lerna.json",
+  "version": "6.7.0-dev.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--scripts-prepend-node-path"
+      ]
+    },
+    "run": {
+      "npmClient": "yarn",
+      "stream": true,
+      "concurrency": 1
+    },
+    "version": {
+      "exact": true,
+      "gitTagVersion": false,
+      "forcePublish": true
+    },
+    "publish": {
+      "gitReset": false,
+      "verifyAccess": false
+    }
+  }
+}

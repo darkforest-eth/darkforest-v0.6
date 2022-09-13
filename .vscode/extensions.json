@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "juanblanco.solidity",
+    "esbenp.prettier-vscode",
+    "hbenl.vscode-mocha-test-adapter",
+    "styled-components.vscode-styled-components",
+    "iden3.circom",
+    "bungcip.better-toml",
+    "runem.lit-plugin",
+    "redhat.vscode-yaml",
+    "graphql.vscode-graphql",
+    "dbaeumer.vscode-eslint",
+    "stkb.rewrap"
+  ]
+}

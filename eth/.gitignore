@@ -1,0 +1,25 @@
+node_modules/*
+build/*
+yarn-error.log
+.gitkeep
+*.env
+.env.prod
+
+.openzeppelin/unknown-*.json
+!.openzeppelin/unknown-100.json
+.openzeppelin/.session
+
+#Hardhat files
+cache
+artifacts
+typechain
+
+subgraph/build/*
+subgraph/generated/*
+subgraph/subgraph.yaml
+subgraph/packages/*
+
+tsconfig.ref.tsbuildinfo
+
+# Local development version of darkforest.toml
+darkforest.localhost.toml

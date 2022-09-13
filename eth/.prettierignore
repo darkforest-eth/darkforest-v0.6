@@ -1,0 +1,6 @@
+.openzeppelin/
+artifacts/
+cache/
+typechain/
+contracts/vendor/**/*.sol
+contracts/facets/DFVerifierFacet.sol

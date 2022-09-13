@@ -1,0 +1,42 @@
+{
+  "name": "@darkforest_eth/procedural",
+  "version": "6.7.0-dev.0",
+  "license": "MIT",
+  "author": "0xPARC <ivan@0xPARC.org>",
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build && npm run docs",
+    "build": "tsc -p .",
+    "test": "exit 0",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "docs": "typedoc && npm run format",
+    "clean": "del-cli dist node_modules tsconfig.ref.tsbuildinfo"
+  },
+  "dependencies": {
+    "@darkforest_eth/serde": "6.7.0-dev.0",
+    "@darkforest_eth/gamelogic": "6.7.0-dev.0",
+    "@darkforest_eth/types": "6.7.0-dev.0",
+    "@darkforest_eth/constants": "6.7.0-dev.0",
+    "@darkforest_eth/hashing": "6.7.0-dev.0",
+    "big-integer": "^1.6.48"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.1",
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.0",
+    "typedoc": "^0.22.8",
+    "typedoc-plugin-markdown": "3.11.x",
+    "typescript": "4.5.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "references": [
+    {
+      "path": "../constants/tsconfig.ref.json"
+    },
+    {
+      "path": "../contracts/tsconfig.ref.json"
+    },
+    {
+      "path": "../events/tsconfig.ref.json"
+    },
+    {
+      "path": "../serde/tsconfig.ref.json"
+    },
+    {
+      "path": "../types/tsconfig.ref.json"
+    }
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true
+  }
+}

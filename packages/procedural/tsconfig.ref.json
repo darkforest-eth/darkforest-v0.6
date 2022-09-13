@@ -1,0 +1,24 @@
+{
+  "extends": "./tsconfig.json",
+  "references": [
+    {
+      "path": "../serde/tsconfig.ref.json"
+    },
+    {
+      "path": "../gamelogic/tsconfig.ref.json"
+    },
+    {
+      "path": "../types/tsconfig.ref.json"
+    },
+    {
+      "path": "../constants/tsconfig.ref.json"
+    },
+    {
+      "path": "../hashing/tsconfig.ref.json"
+    }
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "declarationMap": true
+  }
+}

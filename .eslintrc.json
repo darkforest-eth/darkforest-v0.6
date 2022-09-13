@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "import",
+    "@projectsophon/typescript-enum"
+  ],
+  "env": { "browser": true, "node": true, "es6": true },
+  "globals": {},
+  "rules": {
+    "eqeqeq": "error",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["error", { "allow": ["arrowFunctions"] }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "(^_)", "argsIgnorePattern": "(^_)" }
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "react/jsx-no-undef": ["error", { "allowGlobals": true }],
+    "react/no-unescaped-entities": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@projectsophon/typescript-enum/only-const-enum": "error",
+    "import/no-unresolved": ["error", { "ignore": ["^https:", "type-fest"] }],
+    "import/no-relative-packages": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/client/webpack.config.js",
+          "**/eth/**/*.ts",
+          "**/webserver/test/*.test.ts"
+        ],
+        "optionalDependencies": false,
+        "peerDependencies": false,
+        "bundledDependencies": false
+      }
+    ]
+  },
+  "settings": {
+    "react": { "version": "16.14" },
+    "import/ignore": ["react"],
+    "import/external-module-folders": [
+      "node_modules",
+      "packages/*",
+      "circuits",
+      "client",
+      "eth",
+      "webserver"
+    ]
+  },
+  "parserOptions": {
+    "ecmaFeatures": { "modules": true, "legacyDecorators": true },
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": "packages/**",
+      "rules": {
+        "@projectsophon/typescript-enum/only-const-enum": "off",
+        "@projectsophon/typescript-enum/no-enum": "error"
+      }
+    }
+  ]
+}
